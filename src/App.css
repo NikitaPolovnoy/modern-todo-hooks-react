@@ -1,0 +1,169 @@
+/* --- Global & Container Styling --- */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7f6;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+.app-container {
+    background-color: #ffffff;
+    padding: 30px;
+    /* Increased border radius for modern feel */
+    border-radius: 16px; 
+    /* Soft, pronounced shadow */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); 
+    width: 100%;
+    max-width: 500px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 25px;
+}
+
+/* --- TodoForm Styling --- */
+.todo-form {
+    display: flex;
+    margin-bottom: 25px;
+}
+
+.todo-form input {
+    flex-grow: 1;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px 0 0 8px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.todo-form input:focus {
+    /* Focus border color for clarity */
+    border-color: #6c5ce7; 
+}
+
+.todo-form button {
+    /* Primary button color (Violet/Purple) */
+    background-color: #6c5ce7; 
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    border-radius: 0 8px 8px 0;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    font-weight: 500;
+}
+
+.todo-form button:hover {
+    background-color: #5c4eb5;
+}
+
+/* --- Filter Buttons Styling --- */
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.filter-buttons button {
+    background: none;
+    border: 1px solid #ddd; 
+    border-radius: 20px;
+    padding: 8px 15px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #555;
+    transition: all 0.2s;
+}
+
+/* Style for the active filter button (using the primary color) */
+.filter-buttons button[style*="bold"] {
+    background-color: #6c5ce7; 
+    color: white;
+    border-color: #6c5ce7;
+}
+
+/* --- TodoList Styling --- */
+.todo-list {
+    /* Removes outer border, adds soft shadow for cleaner look */
+    border: none; 
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03); 
+}
+
+/* --- TodoItem Styling --- */
+.todo-item {
+    padding: 15px;
+    background-color: #fff;
+    border-bottom: 1px solid #f0f0f0; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.todo-item:last-child {
+    border-bottom: none;
+}
+
+.todo-item span {
+    flex-grow: 1;
+    /* Increased right margin for better separation from buttons */
+    margin-right: 25px; 
+    font-size: 16px;
+}
+
+/* Action buttons container (Fixes button overlap/spacing) */
+.todo-actions { 
+    display: flex;
+    align-items: center;
+    flex-shrink: 0; /* Prevents the buttons container from shrinking */
+}
+
+/* Styling for all buttons within the list item */
+.todo-item button {
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    /* Margin applied to all buttons to create gap */
+    margin-left: 8px; 
+    transition: background-color 0.2s;
+    font-weight: 500;
+}
+
+.todo-item button:hover {
+    opacity: 0.9;
+}
+
+/* Ensure the first button in the actions container has no left margin (resets default margin) */
+.todo-actions button:first-child { 
+    margin-left: 0;
+}
+
+/* Complete/Undo button - Bright Green for positive action */
+.todo-item button:nth-child(1) { 
+    background-color: #38b000; 
+    color: white;
+}
+
+/* Delete button - Bright Red for critical action */
+.todo-item button:nth-child(2) { 
+    background-color: #ff4d4f; 
+    color: white;
+}
+
+p {
+    color: #888;
+    text-align: center;
+    padding: 20px;
+} 
